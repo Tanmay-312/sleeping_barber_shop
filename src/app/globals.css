@@ -1,0 +1,116 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer base {
+  :root {
+    --background: 30 56% 90%; /* Soft Beige #F2E6D9 */
+    --foreground: 27 29% 20%; /* Dark Brown for text on beige */
+
+    --card: 30 56% 93%; /* Slightly off-beige from background */
+    --card-foreground: 27 29% 20%; /* Dark Brown for text on card */
+
+    --popover: 30 56% 93%;
+    --popover-foreground: 27 29% 20%;
+
+    --primary: 27 29% 50%; /* Rich Brown #A67B5B */
+    --primary-foreground: 30 56% 95%; /* Very light beige/off-white for text on primary */
+
+    --secondary: 27 29% 70%; /* Lighter Brown */
+    --secondary-foreground: 27 29% 20%; /* Dark Brown for text on secondary */
+
+    --muted: 27 29% 80%; /* Muted Brown/Beige */
+    --muted-foreground: 27 29% 40%; /* Darker Muted Brown for text */
+
+    --accent: 18 80% 35%; /* Deep Red (slightly softened) #9A3A12 */
+    --accent-foreground: 30 56% 95%; /* Very light beige/off-white for text on accent */
+    
+    --destructive: 0 72% 51%; /* Adjusted destructive to be a clearer red */
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 27 29% 65%; /* Brownish border */
+    --input: 27 29% 85%; /* Lighter Muted Brown/Beige for input background */
+    --ring: 18 80% 40%; /* Slightly lighter Deep Red for ring (softened) */
+
+    --radius: 0.5rem;
+
+    /* Chart colors - can be adjusted if charts are used */
+    --chart-1: 27 29% 50%; /* Primary Brown */
+    --chart-2: 18 80% 35%; /* Accent Red (softened) */
+    --chart-3: 27 29% 70%; /* Secondary Brown */
+    --chart-4: 30 20% 60%; /* Neutral Greyish Beige */
+    --chart-5: 18 60% 40%; /* Muted Red */
+
+    /* Sidebar variables from template - kept for compatibility but not central to this app's theme */
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Dark theme - Inverting/adjusting the light theme for a cohesive dark mode */
+    --background: 27 15% 15%; /* Dark Brown */
+    --foreground: 30 30% 85%; /* Light Beige/Grey */
+
+    --card: 27 15% 20%; /* Darker Brown for cards */
+    --card-foreground: 30 30% 85%;
+
+    --popover: 27 15% 20%;
+    --popover-foreground: 30 30% 85%;
+
+    --primary: 27 29% 60%; /* Lighter Rich Brown for dark mode */
+    --primary-foreground: 27 15% 10%; /* Very Dark Brown for text on primary */
+
+    --secondary: 27 20% 30%; /* Darker Secondary Brown */
+    --secondary-foreground: 30 30% 85%;
+
+    --muted: 27 15% 25%; /* Dark Muted Brown */
+    --muted-foreground: 30 30% 70%;
+
+    --accent: 18 70% 50%; /* Slightly desaturated/lighter Deep Red for dark mode (softened) */
+    --accent-foreground: 0 0% 98%; /* White/Light text on accent */
+    
+    --destructive: 0 60% 45%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 27 20% 40%; /* Darker Brownish Border */
+    --input: 27 15% 25%; /* Dark Muted Brown for input background */
+    --ring: 18 70% 55%; /* Lighter Deep Red for ring (softened) */
+
+    /* Chart colors for dark mode */
+    --chart-1: 27 29% 60%;
+    --chart-2: 18 70% 50%;
+    --chart-3: 27 29% 50%;
+    --chart-4: 30 20% 40%;
+    --chart-5: 18 60% 30%;
+
+    /* Sidebar variables for dark mode - kept for compatibility */
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
